@@ -1,0 +1,467 @@
+{
+    "usersAdmin": [
+        {
+          "username": "admin1",
+          "email": "admin1@example.com",
+          "password": "admin123",
+          "profile_img": "https://a0.anyrgb.com/pngimg/1140/162/user-profile-login-avatar-heroes-user-blue-icons-circle-symbol-logo-thumbnail.png"
+        },
+        {
+          "username": "admin2",
+          "email": "admin2@example.com",
+          "password": "admin456",
+          "profile_img": "https://a0.anyrgb.com/pngimg/1140/162/user-profile-login-avatar-heroes-user-blue-icons-circle-symbol-logo-thumbnail.png"
+        },
+        {
+          "username": "admin3",
+          "email": "admin3@example.com",
+          "password": "admin789",
+          "profile_img": "https://a0.anyrgb.com/pngimg/1140/162/user-profile-login-avatar-heroes-user-blue-icons-circle-symbol-logo-thumbnail.png"
+        },
+        {
+          "username": "admin4",
+          "email": "admin4@example.com",
+          "password": "admin101112",
+          "profile_img": "https://a0.anyrgb.com/pngimg/1140/162/user-profile-login-avatar-heroes-user-blue-icons-circle-symbol-logo-thumbnail.png"
+        },
+        {
+          "username": "admin5",
+          "email": "admin5@example.com",
+          "password": "admin131415",
+          "profile_img": "https://a0.anyrgb.com/pngimg/1140/162/user-profile-login-avatar-heroes-user-blue-icons-circle-symbol-logo-thumbnail.png"
+        },
+        {
+          "username": "admin6",
+          "email": "admin6@example.com",
+          "password": "admin161718",
+          "profile_img": "https://a0.anyrgb.com/pngimg/1140/162/user-profile-login-avatar-heroes-user-blue-icons-circle-symbol-logo-thumbnail.png"
+        }
+      ]
+      ,
+    "remiseries": [
+          {
+            "name": "Remisería San Miguel",
+            "email": "sanmiguel@example.com",
+            "password": "password123",
+            "name_remiserie": "San Miguel",
+            "phone": "+5491122334455",
+            "profile_img": "https://uploads.turbologo.com/uploads/design/preview_image/5157285/preview_image20210621-27706-169tzdd.png"
+          },
+          {
+            "name": "Remisería Santa Lucía",
+            "email": "santalucia@example.com",
+            "password": "password456",
+            "name_remiserie": "Santa Lucía",
+            "phone": "+5491122334466",
+            "profile_img": "https://uploads.turbologo.com/uploads/design/preview_image/5157285/preview_image20210621-27706-169tzdd.png"
+          },
+          {
+            "name": "Remisería San Juan",
+            "email": "sanjuan@example.com",
+            "password": "password789",
+            "name_remiserie": "San Juan",
+            "phone": "+5491122334477",
+            "profile_img": "https://uploads.turbologo.com/uploads/design/preview_image/5157285/preview_image20210621-27706-169tzdd.png"
+          }
+        ]
+        ,
+      "drivers": [
+        {
+            "name": "Juan",
+            "last_name": "Perez",
+            "email": "juan@example.com",
+            "password": "contraseña123",
+            "address": "Calle Falsa 123",
+            "birthdate": "1985-05-10",
+            "dni": 12345678,
+            "phone": "123456789",
+            "license_movil": "ABC123",
+            "license_pro": "DEF456",
+            "profile_img": "https://example.com/profile.jpg",
+            "latitude": -27.92174082234275,
+            "longitude": -55.760789605720156,
+            "state": true
+        },
+        {
+            "name": "Maria",
+            "last_name": "Gomez",
+            "email": "maria@example.com",
+            "password": "contraseña456",
+            "address": "Avenida Principal 456",
+            "birthdate": "1992-07-15",
+            "dni": 87654321,
+            "phone": "987654321",
+            "license_movil": "GHI789",
+            "license_pro": "JKL012",
+            "profile_img": "https://example.com/profile.jpg",
+            "latitude": -27.91681117709455,
+            "longitude": -55.75393387986425,
+            "state": true
+        },
+        {
+            "name": "Pedro",
+            "last_name": "Gonzalez",
+            "email": "pedro@example.com",
+            "password": "contraseña789",
+            "address": "Plaza Central 789",
+            "birthdate": "1980-03-20",
+            "dni": 54321678,
+            "phone": "678901234",
+            "license_movil": "MNO345",
+            "license_pro": "PQR678",
+            "profile_img": "https://example.com/profile.jpg",
+            "latitude": -27.917980625022214,
+            "longitude": -55.75529779188669,
+            "state": false
+        },
+        {
+            "name": "Andres",
+            "last_name": "Martinez",
+            "email": "andres@example.com",
+            "password": "contraseña123",
+            "address": "Calle Falsa 123",
+            "birthdate": "1987-09-25",
+            "dni": 12345679,
+            "phone": "123456700",
+            "license_movil": "ABC124",
+            "license_pro": "DEF457",
+            "profile_img": "https://example.com/profile.jpg",
+            "latitude": -27.9143,
+            "longitude": -55.7546,
+            "state": true
+        },
+        {
+            "name": "Ana",
+            "last_name": "Lopez",
+            "email": "ana@example.com",
+            "password": "contraseña456",
+            "address": "Avenida Principal 457",
+            "birthdate": "1986-12-03",
+            "dni": 87654322,
+            "phone": "987654322",
+            "license_movil": "GHI790",
+            "license_pro": "JKL013",
+            "profile_img": "https://example.com/profile.jpg",
+            "latitude": -27.90759928643763,
+            "longitude": -55.74725157688256,
+            "state": true
+        },
+        {
+            "name": "Santiago",
+            "last_name": "Hernandez",
+            "email": "santiago@example.com",
+            "password": "contraseña789",
+            "address": "Plaza Central 790",
+            "birthdate": "1995-06-17",
+            "dni": 54321679,
+            "phone": "678901235",
+            "license_movil": "MNO346",
+            "license_pro": "PQR679",
+            "profile_img": "https://example.com/profile.jpg",
+            "latitude": -27.918065487779764,
+            "longitude": -55.750820653429344,
+            "state": false
+        },
+        {
+            "name": "Lucia",
+            "last_name": "Rodriguez",
+            "email": "lucia@example.com",
+            "password": "contraseña123",
+            "address": "Calle Falsa 124",
+            "birthdate": "1989-01-30",
+            "dni": 12345680,
+            "phone": "123456790",
+            "license_movil": "ABC125",
+            "license_pro": "DEF458",
+            "profile_img": "https://example.com/profile.jpg",
+            "latitude": -27.917980625022214,
+            "longitude": -55.75520773188669,
+            "state": true
+        },
+        {
+            "name": "Diego",
+            "last_name": "Garcia",
+            "email": "diego@example.com",
+            "password": "contraseña789",
+            "address": "Calle Falsa 125",
+            "birthdate": "1990-11-12",
+            "dni": 12345681,
+            "phone": "123456791",
+            "license_movil": "ABC126",
+            "license_pro": "DEF459",
+            "profile_img": "https://example.com/profile.jpg",
+            "latitude": -27.909794886985285,
+            "longitude": -55.74816746836488,
+            "state": false
+        },
+        {
+            "name": "Carla",
+            "last_name": "Fernandez",
+            "email": "carla@example.com",
+            "password": "contraseña123",
+            "address": "Calle Falsa 126",
+            "birthdate": "1988-04-28",
+            "dni": 12345682,
+            "phone": "123456792",
+            "license_movil": "ABC127",
+            "license_pro": "DEF460",
+            "profile_img": "https://example.com/profile.jpg",
+            "latitude": -27.907635163274662,
+            "longitude": -55.747197445847206,
+            "state": true
+        },
+        {
+            "name": "Manuel",
+            "last_name": "Martinez",
+            "email": "manuel@example.com",
+            "password": "contraseña123",
+            "address": "Calle Falsa 127",
+            "birthdate": "1984-09-22",
+            "dni": 12345683,
+            "phone": "123456793",
+            "license_movil": "ABC128",
+            "license_pro": "DEF461",
+            "profile_img": "https://example.com/profile.jpg",
+            "latitude": -27.9142,
+            "longitude": -55.7432,
+            "state": false
+        }
+    ]    
+    ,
+    "cars": [
+      {
+        "brand": "Toyota",
+        "model": "Corolla",
+        "patent": "ABC123",
+        "color": "Blue",
+        "year": 2020,
+        "habilitation": true,
+        "insurance": "Seguro XYZ",
+        "date_onboarding": "2022-01-15"
+      },
+      {
+        "brand": "Ford",
+        "model": "Fiesta",
+        "patent": "DEF456",
+        "color": "Red",
+        "year": 2018,
+        "habilitation": false,
+        "insurance": "Seguro ABC",
+        "date_onboarding": "2021-05-20"
+      },
+      {
+        "brand": "Chevrolet",
+        "model": "Cruze",
+        "patent": "GHI789",
+        "color": "Black",
+        "year": 2019,
+        "habilitation": true,
+        "insurance": "Seguro XYZ",
+        "date_onboarding": "2021-11-10"
+      },
+      {
+        "brand": "Volkswagen",
+        "model": "Golf",
+        "patent": "JKL101",
+        "color": "White",
+        "year": 2017,
+        "habilitation": true,
+        "insurance": "Seguro XYZ",
+        "date_onboarding": "2021-08-05"
+      },
+      {
+        "brand": "Honda",
+        "model": "Civic",
+        "patent": "MNO112",
+        "color": "Silver",
+        "year": 2019,
+        "habilitation": true,
+        "insurance": "Seguro ABC",
+        "date_onboarding": "2020-12-20"
+      },
+      {
+        "brand": "Renault",
+        "model": "Kwid",
+        "patent": "PQR131",
+        "color": "Yellow",
+        "year": 2021,
+        "habilitation": true,
+        "insurance": "Seguro XYZ",
+        "date_onboarding": "2022-02-28"
+      },
+      {
+        "brand": "Hyundai",
+        "model": "Accent",
+        "patent": "STU141",
+        "color": "Green",
+        "year": 2016,
+        "habilitation": false,
+        "insurance": "Seguro XYZ",
+        "date_onboarding": "2020-10-15"
+      },
+      {
+        "brand": "Kia",
+        "model": "Rio",
+        "patent": "VWX152",
+        "color": "Orange",
+        "year": 2020,
+        "habilitation": true,
+        "insurance": "Seguro ABC",
+        "date_onboarding": "2021-03-12"
+      },
+      {
+        "brand": "BMW",
+        "model": "3 Series",
+        "patent": "YZA162",
+        "color": "Black",
+        "year": 2018,
+        "habilitation": true,
+        "insurance": "Seguro XYZ",
+        "date_onboarding": "2021-07-30"
+      },
+      {
+        "brand": "Mercedes-Benz",
+        "model": "C-Class",
+        "patent": "BCD173",
+        "color": "Gray",
+        "year": 2019,
+        "habilitation": true,
+        "insurance": "Seguro ABC",
+        "date_onboarding": "2020-09-25"
+      }
+    ]
+    ,
+    "passengers": [
+      {
+        "name": "Juan",
+        "last_name": "García",
+        "address": "Calle Principal 123",
+        "email": "juan@example.com",
+        "birthdate": "1995-08-15",
+        "password": "password123",
+        "phone": "123456789",
+        "latitude": -27.919,
+        "longitude": -55.79,
+        "dni": 10000000,
+        "profile_img": "https://cdn-icons-png.flaticon.com/512/2491/2491921.png"
+      },
+      {
+        "name": "María",
+        "last_name": "López",
+        "address": "Avenida Central 456",
+        "email": "maria@example.com",
+        "birthdate": "1988-04-25",
+        "password": "password456",
+        "phone": "987654321",
+        "latitude": -27.9150,
+        "longitude": -55.7502,
+        "dni": 15000000,
+        "profile_img": "https://cdn-icons-png.flaticon.com/512/2491/2491921.png"
+      },
+      {
+        "name": "Pedro",
+        "last_name": "Martínez",
+        "address": "Calle Secundaria 789",
+        "email": "pedro@example.com",
+        "birthdate": "1990-12-10",
+        "password": "password789",
+        "phone": "555555555",
+        "latitude": -27.919811,
+        "longitude": -55.755948,
+        "dni": 20000000,
+        "profile_img": "https://cdn-icons-png.flaticon.com/512/2491/2491921.png"
+      },
+      {
+        "name": "Ana",
+        "last_name": "Rodríguez",
+        "address": "Avenida Norte 321",
+        "email": "ana@example.com",
+        "birthdate": "1987-06-20",
+        "password": "passwordabc",
+        "phone": "777777777",
+        "latitude": -27.91106,
+        "longitude": -55.7562,
+        "dni": 25000000,
+        "profile_img": "https://cdn-icons-png.flaticon.com/512/2491/2491921.png"
+      },
+      {
+        "name": "Carlos",
+        "last_name": "González",
+        "address": "Calle Sur 987",
+        "email": "carlos@example.com",
+        "birthdate": "1993-10-05",
+        "password": "passwordxyz",
+        "phone": "999999999",
+        "latitude": -27.91299,
+        "longitude": -55.75111,
+        "dni": 30000000,
+        "profile_img": "https://cdn-icons-png.flaticon.com/512/2491/2491921.png"
+      },
+      {
+        "name": "Laura",
+        "last_name": "Sánchez",
+        "address": "Avenida Oeste 654",
+        "email": "laura@example.com",
+        "birthdate": "1996-02-18",
+        "password": "password123",
+        "phone": "888888888",
+        "latitude": -27.915694,
+        "longitude": -55.757621,
+        "dni": 35000000,
+        "profile_img": "https://cdn-icons-png.flaticon.com/512/2491/2491921.png"
+      },
+      {
+        "name": "Diego",
+        "last_name": "Hernández",
+        "address": "Calle Este 147",
+        "email": "diego@example.com",
+        "birthdate": "1985-09-30",
+        "password": "password456",
+        "phone": "666666666",
+        "latitude": -27.920952,
+        "longitude": -55.703001,
+        "dni": 40000000,
+        "profile_img": "https://cdn-icons-png.flaticon.com/512/2491/2491921.png"
+      },
+      {
+        "name": "Sofía",
+        "last_name": "Pérez",
+        "address": "Avenida Principal 753",
+        "email": "sofia@example.com",
+        "birthdate": "1989-11-12",
+        "password": "password789",
+        "phone": "333333333",
+        "latitude": -27.913842,
+        "longitude": -55.758795,
+        "dni": 11000000,
+        "profile_img": "https://cdn-icons-png.flaticon.com/512/2491/2491921.png"
+      },
+      {
+        "name": "Luis",
+        "last_name": "Ramírez",
+        "address": "Calle Central 369",
+        "email": "luis@example.com",
+        "birthdate": "1983-07-28",
+        "password": "passwordabc",
+        "phone": "222222222",
+        "latitude": -27.917077,
+        "longitude": -55.752346,
+        "dni": 12000000,
+        "profile_img": "https://cdn-icons-png.flaticon.com/512/2491/2491921.png"
+      },
+      {
+        "name": "Lucía",
+        "last_name": "Gómez",
+        "address": "Avenida Norte 852",
+        "email": "lucia@example.com",
+        "birthdate": "1986-05-14",
+        "password": "passwordxyz",
+        "phone": "444444444",
+        "latitude": -27.911324,
+        "longitude": -55.753019,
+        "dni": 13000000,
+        "profile_img": "https://cdn-icons-png.flaticon.com/512/2491/2491921.png"
+      }
+    ]
+    
+}

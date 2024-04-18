@@ -1,0 +1,37 @@
+{
+  "compilerOptions": {
+    "target": "ES2016",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    /* Modules */
+    "baseUrl": "./src",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "paths":{
+      "@src/*": ["src/*"],
+      "@modules/*": ["modules/*"],
+      "@middlewares/*": ["middlewares/*"],
+      "@config/*": ["config/*"],
+      "@utils/*": ["utils/*"],
+    },
+
+    /* Emit */
+    "outDir": "./build",
+    "rootDir": "./",
+    "sourceMap": true,
+    
+    /* Interop Constraint */
+    "esModuleInterop": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "strict": true,
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+  },
+  "include": [
+    "src/**/*.ts"
+, "index.ts"  ],
+  "exclude": [
+    "node_modules", "build"
+  ]
+}
