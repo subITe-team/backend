@@ -28,52 +28,8 @@ export default async (req: Request, res: Response): Promise<void> => {
   const passenger_finded = await Passenger.findByPk(id);
 
   if (!passenger_finded) {
-    throw new ClientError("El conductor no existe", 404);
+    throw new ClientError("El pasajero no existe", 404);
   }
-
-  // Verificar si los datos nuevos ya están en uso por otro conductor
-  // Para eso primero creo un {} que se encargara de tener las clausulas que debo buscar en la DB
-  //   const where_clause: any = {
-  //     id: { [Op.not]: id }, // Excluir la remisería actual de la busqueda
-  //   };
-
-  //   if (email !== undefined) {
-  //     //Si el email existe añado un [] al objeto para estipular que los campos
-  //     where_clause[Op.or] = [{ email }]; //Email, name_remiserie y phone deben ser evaluados si ya estan en uso
-  //   } //antes de realizar un cambio
-  //   if (phone !== undefined) {
-  //     if (!where_clause[Op.or]) {
-  //       where_clause[Op.or] = [];
-  //     }
-  //     where_clause[Op.or].push({ phone });
-  //   }
-  //   if (dni !== undefined) {
-  //     if (!where_clause[Op.or]) {
-  //       where_clause[Op.or] = [];
-  //     }
-  //     where_clause[Op.or].push({ dni });
-  //   }
-
-  //   // En caso de que el usuario quizo modificar algunos de los campos de arriba
-  //   // que deben ser unicos, debo realizar una consulta a la DB con esos datos
-  //   if (where_clause[Op.or].length > 0) {
-  //     const data_used = await Passenger.findOne({ where: where_clause });
-
-  //     //Si ya estan en uso devuelvo un error
-  //     if (data_used) {
-  //       let message_error = "";
-
-  //       if (data_used.email === email) {
-  //         message_error = "El Email ya está en uso";
-  //       } else if (data_used.phone === phone) {
-  //         message_error = "El número de teléfono ya está en uso";
-  //       } else if (data_used.dni === dni) {
-  //         message_error = "El número de DNI ya está en uso";
-  //       }
-
-  //       throw new ClientError(message_error, 401);
-  //     }
-  //   }
 
   const where_conditions: WhereOptions[] = [{ id: { [Op.not]: id } }];
 
@@ -98,15 +54,16 @@ export default async (req: Request, res: Response): Promise<void> => {
   if (data_used) {
     let message_error = "";
 
-    if (data_used.email === email) {
+    if (data_used.dataValues.email === email) {
       message_error = "El Email ya está en uso";
-    } else if (data_used.phone === phone) {
+      throw new ClientError(message_error, 401);
+    } else if (data_used.dataValues.phone === phone) {
       message_error = "El número de teléfono ya está en uso";
-    } else if (data_used.dni === dni) {
+      throw new ClientError(message_error, 401);
+    } else if (data_used.dataValues.dni === dni) {
       message_error = "El número de DNI ya está en uso";
+      throw new ClientError(message_error, 401);
     }
-
-    throw new ClientError(message_error, 401);
   }
 
   //Creo un objeto personalizado solo con los datos que el usuario desea modificar

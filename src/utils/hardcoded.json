@@ -462,6 +462,47 @@
         "dni": 13000000,
         "profile_img": "https://cdn-icons-png.flaticon.com/512/2491/2491921.png"
       }
+    ],
+    "chronogram": [
+      {
+        "date": "2024-04-20",
+        "shift": "DAY"
+      },
+      {
+        "date": "2024-04-21",
+        "shift": "NIGHT"
+      },
+      {
+        "date": "2024-04-20",
+        "shift": "DAY"
+      },
+      {
+        "date": "2024-04-21",
+        "shift": "NIGHT"
+      },
+      {
+        "date": "2024-04-20",
+        "shift": "DAY"
+      },
+      {
+        "date": "2024-04-21",
+        "shift": "NIGHT"
+      },
+      {
+        "date": "2024-04-20",
+        "shift": "DAY"
+      },
+      {
+        "date": "2024-04-21",
+        "shift": "NIGHT"
+      },
+      {
+        "date": "2024-04-20",
+        "shift": "DAY"
+      },
+      {
+        "date": "2024-04-21",
+        "shift": "NIGHT"
+      }
     ]
-    
 }

@@ -34,7 +34,7 @@ export default async (req: Request, res: Response): Promise<void> => {
     if (data_used.email === email) {
       message_error = "El Email ya esta en uso";
     } else if (data_used.dni === dni) {
-      message_error = "El nombre de la remisería ya esta en uso";
+      message_error = "El DNI ya esta en uso";
     } else if (data_used.phone === phone) {
       message_error = "El número de teléfono ya esta en uso";
     }
@@ -51,6 +51,7 @@ export default async (req: Request, res: Response): Promise<void> => {
     password: password_hashed,
     address,
     phone,
+    dni,
     birthdate,
     latitude,
     longitude,

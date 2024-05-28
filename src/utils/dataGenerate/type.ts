@@ -3,6 +3,7 @@ import User from "../../models/User.model";
 import Driver from "../../models/Driver.model";
 import Car from "../../models/Car.model";
 import Passenger from "../../models/Passenger.model";
+import Chronogram from "models/Chronogram.model";
 
 // interface User {
 //   username: string;
@@ -68,4 +69,5 @@ export interface Data {
   drivers: Partial<Driver>[];
   cars: Partial<Car>[];
   passengers: Partial<Passenger>[];
+  chronogram: Partial<Chronogram>[];
 }

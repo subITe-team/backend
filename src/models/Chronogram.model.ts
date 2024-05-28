@@ -32,13 +32,19 @@ class Chronogram extends Model {
   @Column(DataType.UUID)
   remiserie_id!: string;
 
-  @Column(DataType.DATE) shift!: Date;
+  @Column(DataType.STRING)
+  date!: string;
+
+  @Column(DataType.STRING)
+  shift!: string;
+
   //Relacion Driver -> Crhonogram
   @BelongsToMany(() => Driver, () => DriverChronogram)
   drivers!: Driver;
 
   @BelongsTo(() => Remiserie)
-  remiseria!: Remiserie;
+  remiserie!: Remiserie;
+
 }
 
 export default Chronogram;

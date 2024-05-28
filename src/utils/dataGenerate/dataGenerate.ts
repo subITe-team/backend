@@ -3,6 +3,7 @@ import Remiserie from "../../models/Remiserie.model";
 import Car from "../../models/Car.model";
 import Driver from "../../models/Driver.model";
 import Passenger from "../../models/Passenger.model";
+import Chronogram from "../../models/Chronogram.model";
 import fs from "fs";
 import ClientError from "../errors/error";
 import { Data } from "./type";
@@ -15,6 +16,7 @@ export default async (): Promise<void> => {
   const cars_id: string[] = [];
   const drivers_id = [];
   const passengers_id = [];
+  const chronogram_id = [];
   let contador_cars = 1;
   let contador_drivers = 1;
 
@@ -140,4 +142,17 @@ export default async (): Promise<void> => {
       passengers_id.push(new_passenger.id);
     }
   }
+
+  // Create chronogram
+  for (const each_chrono of cleaned.chronogram) {
+    const new_chrono = await Chronogram.create(each_chrono);
+    if (!new_chrono)
+      throw new ClientError(
+        `No se pudo crear el cronograma ${each_chrono.id as string}`,
+        400
+      );
+      chronogram_id.push(new_chrono.id);
+    console.log(`se creo ${new_chrono.shift} exitosamente`);
+  }
+
 };
