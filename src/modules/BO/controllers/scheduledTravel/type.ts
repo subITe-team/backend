@@ -6,4 +6,5 @@ export interface RequestBody {
   origin: string;
   destiny: string;
   review_id?: string;
+  remiserie_id: string;
 }

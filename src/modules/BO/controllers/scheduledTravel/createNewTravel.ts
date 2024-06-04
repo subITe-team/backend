@@ -5,12 +5,13 @@ import ClientError from "../../../../utils/errors/error";
 import { RequestBody } from "./type";
 
 export default async (req: Request, res: Response): Promise<void> => {
-  const { driver_id, passenger_id, car_id, start_time, origin, destiny } =
+  const { driver_id, passenger_id, remiserie_id, car_id, start_time, origin, destiny } =
     req.body as RequestBody;
 
   const new_travel = await ScheduledTravel.create({
     driver_id,
     passenger_id,
+    remiserie_id,
     car_id,
     start_time,
     origin,

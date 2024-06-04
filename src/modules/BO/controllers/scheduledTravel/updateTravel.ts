@@ -13,6 +13,7 @@ export default async (req: Request, res: Response): Promise<void> => {
     car_id,
     start_time,
     origin,
+    remiserie_id,
     destiny,
     review_id,
   } = req.body as RequestBody;
@@ -27,6 +28,7 @@ export default async (req: Request, res: Response): Promise<void> => {
   const update_data: Partial<ScheduledTravel> = {};
 
   if (passenger_id) update_data.passenger_id = passenger_id;
+  if (remiserie_id) update_data.remiserie_id = remiserie_id;
   if (driver_id) update_data.driver_id = driver_id;
   if (review_id) update_data.review_id = review_id;
   if (car_id) update_data.car_id = car_id;

@@ -4,6 +4,7 @@ import Car from "../../models/Car.model";
 import Driver from "../../models/Driver.model";
 import Passenger from "../../models/Passenger.model";
 import Chronogram from "../../models/Chronogram.model";
+import ScheduledTravel from "../../models/ScheduledTravel.model";
 import fs from "fs";
 import ClientError from "../errors/error";
 import { Data } from "./type";
@@ -12,11 +13,12 @@ export default async (): Promise<void> => {
   const data = fs.readFileSync("./src/utils/hardcoded.json", "utf-8");
   const cleaned = JSON.parse(data) as Data;
   const users_admins_id = [];
-  const remiseries_id = [];
+  const remiseries_id: string[] = [];
   const cars_id: string[] = [];
-  const drivers_id = [];
-  const passengers_id = [];
+  const drivers_id: string[] = [];
+  const passengers_id: string[] = [];
   const chronogram_id = [];
+  const travel_id: string[] = [];
   let contador_cars = 1;
   let contador_drivers = 1;
 
@@ -151,8 +153,20 @@ export default async (): Promise<void> => {
         `No se pudo crear el cronograma ${each_chrono.id as string}`,
         400
       );
-      chronogram_id.push(new_chrono.id);
+    chronogram_id.push(new_chrono.id);
     console.log(`se creo ${new_chrono.shift} exitosamente`);
   }
 
+  // Create Scheduled Travels
+  for (const each_travel of cleaned.travel) {
+    const new_travel = await ScheduledTravel.create({
+      ...each_travel,
+      remiserie_id: remiseries_id[0], // Assuming you're associating with the first remiserie
+      passenger_id: passengers_id[1], // Assuming you're associating with the first passenger
+      driver_id: drivers_id[0], // Assuming you're associating with the first driver
+      car_id: cars_id[0], // Assuming you're associating with the first car
+    });
+    travel_id.push(new_travel.id);
+    console.log(`Se creo con esito el viaje a ${new_travel.destiny}`);
+  }
 };
