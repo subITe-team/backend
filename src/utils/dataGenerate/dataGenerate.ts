@@ -147,12 +147,20 @@ export default async (): Promise<void> => {
 
   // Create chronogram
   for (const each_chrono of cleaned.chronogram) {
-    const new_chrono = await Chronogram.create(each_chrono);
+    const new_chrono = await Chronogram.create({
+      ...each_chrono,
+      remiserie_id: remiseries_id[0],
+    });
     if (!new_chrono)
       throw new ClientError(
         `No se pudo crear el cronograma ${each_chrono.id as string}`,
         400
       );
+    const driverInstances = await Driver.findAll({
+      where: { id: drivers_id },
+    });
+
+    await new_chrono.$add("drivers", driverInstances);
     chronogram_id.push(new_chrono.id);
     console.log(`se creo ${new_chrono.shift} exitosamente`);
   }

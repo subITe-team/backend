@@ -3,53 +3,37 @@ import Chronogram from "../../../../models/Chronogram.model";
 import response from "../../../../utils/response";
 import { RequestBody } from "./type";
 import ClientError from "../../../../utils/errors/error";
+import Driver from "../../../../models/Driver.model";
+import sequelize from "../../../../config/database";
 
 export default async (req: Request, res: Response): Promise<void> => {
-  const { driver_id, shift, date, remiserie_id } = req.body as RequestBody;
-  
-   const new_chrono = await Chronogram.create({ 
-        driver_id,
-        date,
-        remiserie_id,
-        shift,
-      });
+  const { shift, date, remiserie_id, drivers } = req.body as RequestBody;
 
-      if (new_chrono)
-        response(res, 201, "El cronograma se ha creado exitosamente.");
-        else 
-        throw new ClientError("Ocurrio un error", 500)
-      
+  // Iniciar una transacción
+  const transaction = await sequelize.transaction();
+  // Crear el nuevo cronograma
+  const new_chrono = await Chronogram.create(
+    {
+      date,
+      remiserie_id,
+      shift,
+    },
+    { transaction }
+  );
 
-  };
+  const driverInstances = await Driver.findAll({
+    where: { id: drivers },
+    transaction,
+  });
 
-//   import { Request, Response } from "express";
-// import Chronogram from "../../../../models/Chronogram.model";
-// import response from "../../../../utils/response";
-// import { RequestBody } from "./type";
+  if (driverInstances.length !== drivers.length) {
+    await transaction.rollback();
+    throw new ClientError("Uno o más conductores no se encontraron", 404);
+  }
 
-// export default async (req: Request, res: Response): Promise<void> => {
+  await new_chrono.$set("drivers", driverInstances, { transaction });
 
-// try {
-//   const chronoArray = req.body as Array<RequestBody>;
+  await transaction.commit();
 
-//   const creationPromises = [];
-
-//   for (const chrono of chronoArray) {
-//     const { driver_id, shift, date, remiserie_id } = chrono;
-  
-//    creationPromises.push(Chronogram.create(
-//     { 
-//        driver_id,
-//        shift,
-//        date,
-//        remiserie_id
-//       }))
-//     }
-
-//     await Promise.all(creationPromises);
-
-//     response(res, 201, "El cronograma se ha creado exitosamente.");
-//   } catch (error) {
-//     response(res, 500, "Error interno del servidor al crear los cronogramas");
-//   }
-// };
+  response(res, 201, "El cronograma se ha creado exitosamente.");
+};

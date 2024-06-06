@@ -11,6 +11,7 @@ import createNewChronogram from "./chronogram/createNewChronogram";
 import deleteChronogram from "./chronogram/deleteChronogram";
 import findChronogram from "./chronogram/findChronogram";
 import getAllChronogram from "./chronogram/getAllChronogram";
+import getAllChronogramByRemiserie from "./chronogram/getAllChronogramByRemiserie";
 import updateChronogram from "./chronogram/updateChronogram";
 //Imports driver
 import createNewDriver from "./driver/createNewDriver";
@@ -85,6 +86,7 @@ export default {
     findOne: catchedAsync(findChronogram),
     update: catchedAsync(updateChronogram),
     delete: catchedAsync(deleteChronogram),
+    getAllByRemiserie: catchedAsync(getAllChronogramByRemiserie),
   },
   passenger: {
     create: catchedAsync(createNewPassenger),

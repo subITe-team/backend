@@ -24,9 +24,9 @@ class Chronogram extends Model {
   })
   id!: string;
 
-  @ForeignKey(() => Driver)
-  @Column(DataType.UUID)
-  driver_id!: string;
+  //   @ForeignKey(() => Driver)
+  //   @Column(DataType.UUID)
+  //   driver_id!: string;
 
   @ForeignKey(() => Remiserie)
   @Column(DataType.UUID)
@@ -40,11 +40,10 @@ class Chronogram extends Model {
 
   //Relacion Driver -> Crhonogram
   @BelongsToMany(() => Driver, () => DriverChronogram)
-  drivers!: Driver;
+  drivers!: Driver[];
 
   @BelongsTo(() => Remiserie)
   remiserie!: Remiserie;
-
 }
 
 export default Chronogram;

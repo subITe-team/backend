@@ -14,6 +14,7 @@ import Chronogram from "./Chronogram.model";
 import Review from "./Review.model";
 import Remiserie from "./Remiserie.model";
 import DriverCar from "./intermediate/DriverCar.model";
+import DriverChronogram from "./intermediate/DriverChronogram";
 
 @Table({
   timestamps: true,
@@ -84,7 +85,7 @@ class Driver extends Model {
   scheduledTravels!: ScheduledTravel[];
 
   //Relacion Driver -> Chronogram
-  @HasMany(() => Chronogram)
+  @BelongsToMany(() => Chronogram, () => DriverChronogram)
   chronograms!: Chronogram[];
 
   //Relacion Driver -> Review
