@@ -31,6 +31,8 @@ import deleteRemiserie from "./remiserie/deleteRemiserie";
 import findRemiserie from "./remiserie/findRemiserie";
 import getAllRemiserie from "./remiserie/getAllRemiserie";
 import updateRemiserie from "./remiserie/updateRemiserie";
+import loginGoogleRemiserie from "./remiserie/loginGoogleRemiserie";
+import logoutGoogleRemiserie from "./remiserie/logoutGoogleRemiserie";
 //Import reviews
 import createNewReview from "./review/createNewReview";
 import findReview from "./review/findReview";
@@ -64,6 +66,8 @@ export default {
     findOne: catchedAsync(findRemiserie),
     update: catchedAsync(updateRemiserie),
     delete: catchedAsync(deleteRemiserie),
+    loginGoogle: catchedAsync(loginGoogleRemiserie),
+    logoutGoogle: catchedAsync(logoutGoogleRemiserie),
   },
   driver: {
     create: catchedAsync(createNewDriver),

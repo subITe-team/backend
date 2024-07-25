@@ -10,5 +10,5 @@ export default {
   PGPORT: process.env.PGPORT,
   PGCONN: process.env.PGCONN,
   NODE_ENV: process.env.NODE_ENV,
-  CLERK_SECRET_KEY: process.env.CLERK_SECRET_KEY,
+  JWT_SECRET: process.env.JWT_SECRET || "default_secret",
 };

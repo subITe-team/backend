@@ -5,4 +5,5 @@ export interface RequestBody {
   name_remiserie: string;
   phone: string;
   profile_img: string;
+  token: string | null;
 }
