@@ -1,10 +1,10 @@
 export interface RequestBody {
-  name: string;
+  first_name: string;
   last_name: string;
   email: string;
   address: string;
   birthdate: Date;
-  dni: number;
+  dni: string;
   phone: string;
   license_movil: string;
   license_pro: string;

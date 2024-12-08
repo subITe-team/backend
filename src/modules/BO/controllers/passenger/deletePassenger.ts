@@ -16,5 +16,9 @@ export default async (req: Request, res: Response): Promise<void> => {
   await passenger_finded.destroy();
 
   // Respuesta exitosa
-  response(res, 201, `Se eliminó a ${passenger_finded.name} exitosamente`);
+  response(
+    res,
+    201,
+    `Se eliminó a ${passenger_finded.first_name} ${passenger_finded.last_name} exitosamente`
+  );
 };

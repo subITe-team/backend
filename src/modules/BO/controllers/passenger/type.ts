@@ -1,5 +1,5 @@
 export interface RequestBody {
-  name: string;
+  first_name: string;
   last_name: string;
   address: string;
   email: string;
@@ -8,7 +8,7 @@ export interface RequestBody {
   phone: string;
   latitude: number;
   longitude: number;
-  dni: number;
+  dni: string;
   remiserie_id: string;
   profile_img: string;
 }

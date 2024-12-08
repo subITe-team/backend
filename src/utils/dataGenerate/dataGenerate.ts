@@ -99,7 +99,9 @@ export default async (): Promise<void> => {
       drivers_id.push(new_driver.id);
       await new_driver.$add("cars", cars_id[contador_drivers - 1]);
       contador_drivers++;
-      console.log(`Se creo el conductor ${new_driver.name} exitosamente`);
+      console.log(
+        `Se creo el conductor ${new_driver.first_name} ${new_driver.last_name} exitosamente`
+      );
     } else if (contador_drivers > 5 && contador_drivers < 9) {
       each_driver.remiserie_id = remiseries_id[1];
       const new_driver = await Driver.create(each_driver);
@@ -111,7 +113,9 @@ export default async (): Promise<void> => {
       drivers_id.push(new_driver.id);
       await new_driver.$add("cars", cars_id[contador_drivers - 1]);
       contador_drivers++;
-      console.log(`Se creo el conductor ${new_driver.name} exitosamente`);
+      console.log(
+        `Se creo el conductor ${new_driver.first_name} ${new_driver.last_name} exitosamente`
+      );
     } else {
       each_driver.remiserie_id = remiseries_id[2];
       const new_driver = await Driver.create(each_driver);
@@ -123,7 +127,9 @@ export default async (): Promise<void> => {
       drivers_id.push(new_driver.id);
       await new_driver.$add("cars", cars_id[contador_drivers - 1]);
       contador_drivers++;
-      console.log(`Se creo el conductor ${new_driver.name} exitosamente`);
+      console.log(
+        `Se creo el conductor ${new_driver.first_name} ${new_driver.last_name} exitosamente`
+      );
     }
   }
 
@@ -132,14 +138,20 @@ export default async (): Promise<void> => {
     const new_passenger = await Passenger.create(each_passenger);
     if (!new_passenger) {
       console.log(
-        `No se pudo crear el pasajero ${each_passenger.name as string}`
+        `No se pudo crear el pasajero ${each_passenger.first_name ?? ""} ${
+          each_passenger.last_name ?? ""
+        }`
       );
       throw new ClientError(
-        `No se pudo crear el pasajero ${each_passenger.name as string}`
+        `No se pudo crear el pasajero ${each_passenger.first_name ?? ""} ${
+          each_passenger.last_name ?? ""
+        }`
       );
     } else {
       console.log(
-        `Se creo con exito el pasajero ${each_passenger.name as string}`
+        `Se creo con exito el pasajero ${each_passenger.first_name ?? ""} ${
+          each_passenger.last_name ?? ""
+        }`
       );
       passengers_id.push(new_passenger.id);
     }

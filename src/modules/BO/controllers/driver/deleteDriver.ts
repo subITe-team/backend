@@ -16,5 +16,5 @@ export default async (req: Request, res: Response): Promise<void> => {
   await driver_finded.destroy();
 
   // Respuesta exitosa
-  response(res, 201, `Se eliminó a ${driver_finded.name} exitosamente`);
+  response(res, 201, `Se eliminó a ${driver_finded.first_name} exitosamente`);
 };

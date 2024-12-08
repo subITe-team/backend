@@ -26,7 +26,7 @@ class Passenger extends Model {
   id!: string;
 
   @Column(DataType.STRING)
-  name!: string;
+  first_name!: string;
 
   @Column(DataType.STRING)
   last_name!: string;
@@ -52,8 +52,8 @@ class Passenger extends Model {
   @Column(DataType.FLOAT)
   longitude!: number;
 
-  @Column({ type: DataType.INTEGER, allowNull: false, unique: true })
-  dni!: number;
+  @Column({ type: DataType.STRING, allowNull: false, unique: true })
+  dni!: string;
 
   @Column(DataType.STRING)
   profile_img!: string;
@@ -82,6 +82,16 @@ class Passenger extends Model {
   //Relacion un remiserie para cada passenger
   @BelongsToMany(() => Remiserie, () => PassengerRemiserie)
   remiserie!: Remiserie[];
+}
+
+export interface PassengerAttributes {
+  id: string;
+  first_name: string;
+  last_name: string;
+  email: string;
+  phone: string;
+  dni: string;
+  // ... add other required attributes
 }
 
 export default Passenger;

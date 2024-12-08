@@ -65,7 +65,7 @@
   ],
   "drivers": [
     {
-      "name": "Juan",
+      "first_name": "Juan",
       "last_name": "Perez",
       "email": "juan@example.com",
       "password": "contraseña123",
@@ -81,7 +81,7 @@
       "state": true
     },
     {
-      "name": "Maria",
+      "first_name": "Maria",
       "last_name": "Gomez",
       "email": "maria@example.com",
       "password": "contraseña456",
@@ -97,7 +97,7 @@
       "state": true
     },
     {
-      "name": "Pedro",
+      "first_name": "Pedro",
       "last_name": "Gonzalez",
       "email": "pedro@example.com",
       "password": "contraseña789",
@@ -113,7 +113,7 @@
       "state": false
     },
     {
-      "name": "Andres",
+      "first_name": "Andres",
       "last_name": "Martinez",
       "email": "andres@example.com",
       "password": "contraseña123",
@@ -129,7 +129,7 @@
       "state": true
     },
     {
-      "name": "Ana",
+      "first_name": "Ana",
       "last_name": "Lopez",
       "email": "ana@example.com",
       "password": "contraseña456",
@@ -145,7 +145,7 @@
       "state": true
     },
     {
-      "name": "Santiago",
+      "first_name": "Santiago",
       "last_name": "Hernandez",
       "email": "santiago@example.com",
       "password": "contraseña789",
@@ -161,7 +161,7 @@
       "state": false
     },
     {
-      "name": "Lucia",
+      "first_name": "Lucia",
       "last_name": "Rodriguez",
       "email": "lucia@example.com",
       "password": "contraseña123",
@@ -177,7 +177,7 @@
       "state": true
     },
     {
-      "name": "Diego",
+      "first_name": "Diego",
       "last_name": "Garcia",
       "email": "diego@example.com",
       "password": "contraseña789",
@@ -193,7 +193,7 @@
       "state": false
     },
     {
-      "name": "Carla",
+      "first_name": "Carla",
       "last_name": "Fernandez",
       "email": "carla@example.com",
       "password": "contraseña123",
@@ -209,7 +209,7 @@
       "state": true
     },
     {
-      "name": "Manuel",
+      "first_name": "Manuel",
       "last_name": "Martinez",
       "email": "manuel@example.com",
       "password": "contraseña123",
@@ -329,7 +329,7 @@
   ],
   "passengers": [
     {
-      "name": "Juan",
+      "first_name": "Juan",
       "last_name": "García",
       "address": "Calle Principal 123",
       "email": "juan@example.com",
@@ -342,7 +342,7 @@
       "profile_img": "https://cdn-icons-png.flaticon.com/512/2491/2491921.png"
     },
     {
-      "name": "María",
+      "first_name": "María",
       "last_name": "López",
       "address": "Avenida Central 456",
       "email": "maria@example.com",
@@ -355,7 +355,7 @@
       "profile_img": "https://cdn-icons-png.flaticon.com/512/2491/2491921.png"
     },
     {
-      "name": "Pedro",
+      "first_name": "Pedro",
       "last_name": "Martínez",
       "address": "Calle Secundaria 789",
       "email": "pedro@example.com",
@@ -368,7 +368,7 @@
       "profile_img": "https://cdn-icons-png.flaticon.com/512/2491/2491921.png"
     },
     {
-      "name": "Ana",
+      "first_name": "Ana",
       "last_name": "Rodríguez",
       "address": "Avenida Norte 321",
       "email": "ana@example.com",
@@ -381,7 +381,7 @@
       "profile_img": "https://cdn-icons-png.flaticon.com/512/2491/2491921.png"
     },
     {
-      "name": "Carlos",
+      "first_name": "Carlos",
       "last_name": "González",
       "address": "Calle Sur 987",
       "email": "carlos@example.com",
@@ -394,7 +394,7 @@
       "profile_img": "https://cdn-icons-png.flaticon.com/512/2491/2491921.png"
     },
     {
-      "name": "Laura",
+      "first_name": "Laura",
       "last_name": "Sánchez",
       "address": "Avenida Oeste 654",
       "email": "laura@example.com",
@@ -407,7 +407,7 @@
       "profile_img": "https://cdn-icons-png.flaticon.com/512/2491/2491921.png"
     },
     {
-      "name": "Diego",
+      "first_name": "Diego",
       "last_name": "Hernández",
       "address": "Calle Este 147",
       "email": "diego@example.com",
@@ -420,7 +420,7 @@
       "profile_img": "https://cdn-icons-png.flaticon.com/512/2491/2491921.png"
     },
     {
-      "name": "Sofía",
+      "first_name": "Sofía",
       "last_name": "Pérez",
       "address": "Avenida Principal 753",
       "email": "sofia@example.com",
@@ -433,7 +433,7 @@
       "profile_img": "https://cdn-icons-png.flaticon.com/512/2491/2491921.png"
     },
     {
-      "name": "Luis",
+      "first_name": "Luis",
       "last_name": "Ramírez",
       "address": "Calle Central 369",
       "email": "luis@example.com",
@@ -446,7 +446,7 @@
       "profile_img": "https://cdn-icons-png.flaticon.com/512/2491/2491921.png"
     },
     {
-      "name": "Lucía",
+      "first_name": "Lucía",
       "last_name": "Gómez",
       "address": "Avenida Norte 852",
       "email": "lucia@example.com",

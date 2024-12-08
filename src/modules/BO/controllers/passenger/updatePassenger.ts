@@ -5,12 +5,13 @@ import response from "../../../../utils/response";
 import bcrypt from "bcrypt";
 import ClientError from "../../../../utils/errors/error";
 import { RequestBody } from "./type";
+import { PassengerAttributes } from "../../../../models/Passenger.model";
 
 export default async (req: Request, res: Response): Promise<void> => {
   const { id } = req.params; // Obtener el ID del conductor a actualizar
 
   const {
-    name,
+    first_name,
     last_name,
     address,
     email,
@@ -51,16 +52,17 @@ export default async (req: Request, res: Response): Promise<void> => {
 
   const data_used = await Passenger.findOne({ where: where_clause });
 
-  if (data_used) {
+  if (data_used !== null) {
     let message_error = "";
+    const values = data_used.get() as PassengerAttributes;
 
-    if (data_used.dataValues.email === email) {
+    if (values.email === email) {
       message_error = "El Email ya está en uso";
       throw new ClientError(message_error, 401);
-    } else if (data_used.dataValues.phone === phone) {
+    } else if (values.phone === phone) {
       message_error = "El número de teléfono ya está en uso";
       throw new ClientError(message_error, 401);
-    } else if (data_used.dataValues.dni === dni) {
+    } else if (values.dni === dni) {
       message_error = "El número de DNI ya está en uso";
       throw new ClientError(message_error, 401);
     }
@@ -69,7 +71,7 @@ export default async (req: Request, res: Response): Promise<void> => {
   //Creo un objeto personalizado solo con los datos que el usuario desea modificar
   const update_data: Partial<Passenger> = {};
 
-  if (name) update_data.name = name;
+  if (first_name) update_data.first_name = first_name;
   if (last_name) update_data.last_name = last_name;
   if (email) update_data.email = email;
   if (address) update_data.address = address;
@@ -88,5 +90,9 @@ export default async (req: Request, res: Response): Promise<void> => {
   //asigno los cambios
   const data_updated = await passenger_finded.update(update_data);
 
-  response(res, 200, `Se actualizó con éxito al pasajero ${data_updated.name}`);
+  response(
+    res,
+    200,
+    `Se actualizó con éxito al pasajero ${data_updated.first_name} ${data_updated.last_name}`
+  );
 };

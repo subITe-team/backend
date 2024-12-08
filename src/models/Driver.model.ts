@@ -30,7 +30,7 @@ class Driver extends Model {
   id!: string;
 
   @Column(DataType.STRING)
-  name!: string;
+  first_name!: string;
 
   @Column(DataType.STRING)
   last_name!: string;
@@ -51,8 +51,8 @@ class Driver extends Model {
   @Column({ type: DataType.DATEONLY, allowNull: false })
   birthdate!: Date;
 
-  @Column({ type: DataType.INTEGER, unique: true })
-  dni!: number;
+  @Column({ type: DataType.STRING, unique: true })
+  dni!: string;
 
   @Column({ type: DataType.STRING, unique: true, allowNull: false })
   phone!: string;

@@ -10,7 +10,7 @@ export default async (req: Request, res: Response): Promise<void> => {
   const { id } = req.params; // Obtener el ID del conductor a actualizar
 
   const {
-    name,
+    first_name,
     last_name,
     email,
     address,
@@ -132,7 +132,7 @@ export default async (req: Request, res: Response): Promise<void> => {
   //Creo un objeto personalizado solo con los datos que el usuario desea modificar
   const update_data: Partial<Driver> = {};
 
-  if (name) update_data.name = name;
+  if (first_name) update_data.first_name = first_name;
   if (last_name) update_data.last_name = last_name;
   if (email) update_data.email = email;
   if (address) update_data.address = address;
@@ -155,6 +155,6 @@ export default async (req: Request, res: Response): Promise<void> => {
   response(
     res,
     200,
-    `Se actualizó con éxito al conductor ${data_updated.name}`
+    `Se actualizó con éxito al conductor ${data_updated.first_name} ${data_updated.last_name}`
   );
 };

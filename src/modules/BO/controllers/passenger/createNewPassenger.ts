@@ -8,7 +8,7 @@ import { RequestBody } from "./type";
 
 export default async (req: Request, res: Response): Promise<void> => {
   const {
-    name,
+    first_name,
     last_name,
     address,
     email,
@@ -45,7 +45,7 @@ export default async (req: Request, res: Response): Promise<void> => {
   const password_hashed = await bcrypt.hash(password, 10);
 
   const new_passenger = await Passenger.create({
-    name,
+    first_name,
     last_name,
     email,
     password: password_hashed,
@@ -63,7 +63,7 @@ export default async (req: Request, res: Response): Promise<void> => {
     response(
       res,
       201,
-      `Se creo con exito al pasajero ${new_passenger.name.toUpperCase()} ${new_passenger.last_name.toUpperCase()}`
+      `Se creo con éxito al pasajero ${new_passenger.first_name.toUpperCase()} ${new_passenger.last_name.toUpperCase()}`
     );
   else
     throw new ClientError(
